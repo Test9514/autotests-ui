@@ -31,4 +31,4 @@ def test_successful_registration():  # Создаем тестовую функ�
 
         page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard')
 
-        page.wait_for_timeout(5000)
+#        page.wait_for_timeout(5000)
