@@ -23,5 +23,5 @@ with sync_playwright() as playwright:
     expect(wrong_email_or_password_alert).to_be_visible()
 #    expect(wrong_email_or_password_alert).to_be_hidden()
     expect(wrong_email_or_password_alert).to_have_text("Wrong email or password")
-    
+
     page.wait_for_timeout(5000)
