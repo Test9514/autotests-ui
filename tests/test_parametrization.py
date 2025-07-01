@@ -90,3 +90,27 @@ def format_phone_number(phone_number: str) -> str:
 )
 def test_identifiers_3(phone_number: str):
     ...
+
+
+@pytest.mark.parametrize(
+    "value",
+    [
+        1,
+        pytest.param(2, marks=pytest.mark.skip(reason="Not supported")),  # Тест со значением 2 будет пропущен.
+        3
+    ]
+)
+def test_example(value):
+    pass
+
+
+@pytest.mark.parametrize(
+    "input_value",
+    [
+        pytest.param(1, marks=pytest.mark.xfail(reason="Known issue with 1")),
+        2,
+        pytest.param(3, marks=pytest.mark.skip(reason="Feature not implemented for 3")),
+    ]
+)
+def test_function(input_value):
+    assert input_value != 1
